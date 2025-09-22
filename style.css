@@ -139,7 +139,7 @@ body.light-mode .light-logo { opacity: 1; }
 
 nav a {
   color: var(--white-color);
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 500;
   margin-left: 3.5rem;
   transition: 0.2s;
