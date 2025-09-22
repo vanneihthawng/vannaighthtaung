@@ -94,12 +94,12 @@ const activeProject = () => {
   projectDetais[index].classList.add('active');
 }
 arrowRight.addEventListener('click', () => {
-  if (index < 2) {
+  if (index < 3) {
     index++;
     arrowLeft.classList.remove('disabled');
   }
   else {
-    index = 3;
+    index = 4;
     arrowRight.classList.add('disabled');
   }
   activeProject();
