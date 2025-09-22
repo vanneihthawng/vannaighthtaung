@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Van Neih Thawng official website">
+  <meta name="keywords"
+    content="Van Neih Thawng, official website, personal porfolio, web developer, software engineer">
+  <title>Van Neih Thawng</title>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- boxicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+  <!-- style css -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- favicon -->
+  <link rel="icon" href="./image/Favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="active">
+    <a href="#" class="logo"><img src="./image/logo.png" alt="logo"></a>
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="#">Resume</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <!-- Dark Mode Switch -->
+<label class="switch">
+    <input type="checkbox" id="darkModeToggle">
+    <span class="slider"></span>
+  </label>
+
+  </header>
+
+  <!-- bars background -->
+  <div class="bar-box active">
+    <div class="bar" style="--i:6;"></div>
+    <div class="bar" style="--i:5;"></div>
+    <div class="bar" style="--i:4;"></div>
+    <div class="bar" style="--i:3;"></div>
+    <div class="bar" style="--i:2;"></div>
+    <div class="bar" style="--i:1;"></div>
+  </div>
+
+  <!-- home section -->
+  <section class="home active" id="home">
+    <div class="home-content">
+      <h1>Van Neih Thawng</h1>
+      <h2>I'm a
+        <span style="--i:4;" data-text="Front-End Developer">Front-End Developer</span>
+        <span style="--i:3;" data-text="Student">Student</span>
+        <span style="--i:2;" data-text="Warehouse Associate">Warehouse Associate</span>
+        <span style="--i:1;" data-text="Batman">Batman</span>
+      </h2>
+      <p>Front-end developer by day, genius by night—my code even debugs itself (sometimes)</p>
+      <div class="btn-container">
+        <a href="#" class="btn scroll-to-contact">Contact Me</a>
+        <div class="social-icons">
+          <a href="https://github.com/vanneihthawng" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vanneihthawng/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/vannaighthtaung" target="_blank"><i
+              class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://www.instagram.com/vannaighthtaung" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@vanneihthawng" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-img">
+      <div class="img-container">
+        <div class="img-item">
+          <img src="./image/home-dark.png" class="theme-img dark-img" alt="Home Image">
+          <img src="./image/home-light.jpg" class="theme-img light-img" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- resume section -->
+  <section class="resume" id="resume">
+    <div class="resume-container">
+      <div class="resume-box sidebar">
+        <h2>Why Hire Me?</h2>
+        <p class="description">
+          I am a results-driven front-end developer with proven skills in building responsive, user-friendly websites.
+          My strong work ethic, adaptability, and dedication to continuous improvement make me an excellent choice for
+          team.
+        </p>
+        <button class="resume-btn active">Experience</button>
+        <button class="resume-btn">Education</button>
+        <button class="resume-btn">Certificate</button>
+        <button class="resume-btn">Skills</button>
+      </div>
+
+      <div class="resume-box">
+        <!-- Experience Resume -->
+        <div class="resume-detail experience active">
+          <h2 class="heading">My <span>Experience</span></h2>
+          <p class="resume-text">
+            Front-End Experience and IT Experiences
+          </p>
+          <div class="resume-list it">
+            <div class="resume-item">
+              <p class="year">2025 - Present</p>
+              <h3>Meta Front-End Development Project</h3>
+              <p class="company">Coursera (Meta Course)</p>
+              <ul>
+                <li>Developed interactive web applications using React and TypeScript</li>
+                <li>Implemented responsive design principles with CSS Flexbox and Grid</li>
+                <li>Integrated RESTful APIs and GraphQL for dynamic data fetching</li>
+                <li>Deployed projects on GitHub Pages for public access</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <p class="year">2015 - 2020</p>
+              <h3>University Coursework Projects</h3>
+              <p class="company">Mandalay Technological University</p>
+              <ul>
+                <li><b>Programming Labs</b> built Java and Python console apps</li>
+                <li><b>Cisco Networking</b> configured VLANs, ACLs & routing in Packet Tracer</li>
+                <li><b>CompTIA A+</b> hands-on hardware troubleshooting and OS installations</li>
+                <li><b>Intern, KBZ Bank Data Center</b> supported server maintenance & network monitoring</li>
+              </ul>
+            </div>
+          </div>
+          <p class="resume-text">
+            Other Professional Experiences
+          </p>
+          <div class="resume-list other">
+            <div class="resume-item">
+              <p class="year">2025 - Present</p>
+              <h3>Warehouse Associate</h3>
+              <p class="company">Cardinal Health</p>
+              <ul>
+                <li>Pick, pack, and ship 150+ orders per shift with 99.8% accuracy</li>
+                <li>Operate RF scanners and forklifts to speed up inventory and cut fulfillment time by 15%</li>
+                <li>Worked with teams to set up a new bin system, reducing errors by 20%</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <p class="year">3/2024 - 9/2024</p>
+              <h3>General Labor Assistant</h3>
+              <p class="company">Josepth's Farm</p>
+              <ul>
+                <li>Assisted with daily farm operations, including planting and harvesting crops</li>
+                <li>Maintained equipment and tools to ensure safety and efficiency</li>
+                <li>Collaborated with team members to improve workflow and productivity</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <p class="year">3/2024 - 9/2024</p>
+              <h3>General Labor Assistant</h3>
+              <p class="company">Josepth's Farm</p>
+              <ul>
+                <li>Assisted with daily farm operations, including planting and harvesting crops</li>
+                <li>Maintained equipment and tools to ensure safety and efficiency</li>
+                <li>Collaborated with team members to improve workflow and productivity</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <p class="year">3/2024 - 9/2024</p>
+              <h3>General Labor Assistant</h3>
+              <p class="company">Josepth's Farm</p>
+              <ul>
+                <li>Assisted with daily farm operations, including planting and harvesting crops</li>
+                <li>Maintained equipment and tools to ensure safety and efficiency</li>
+                <li>Collaborated with team members to improve workflow and productivity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Education Resume -->
+        <div class="resume-detail education">
+          <h2 class="heading">My <span>Education</span></h2>
+          <p class="resume-text">
+            Strong science background in high school, Bachelor in Computer Engineering & IT, now pursuing Associate
+            Degree in Computer Science.
+          </p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <p class="year">2025 - Present</p>
+              <h3>Associate Degree in Computer Science</h3>
+              <p class="company">Anne Arundel Community Colledge</p>
+            </div>
+            <div class="resume-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <p class="year">2015 - 2020</p>
+              <h3>Bachelor of Computer Engineering and IT</h3>
+              <p class="company">Mandalay Technological University</p>
+              <ul>
+                <li style=" color: var(--main-color);">GPA: 3.73/5.0</li>
+                <li><b>Relevant Coursework:</b><br>Programming Languages, Data Structures & Algorithms, Object-Oriented
+                  Programming, Software Engineering, Database Management Systems, Digital Logic Design, Computer
+                  Networks, Project Management
+                </li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <p class="year">Graduated 2015</p>
+              <h3>High School Diploma</h3>
+              <p class="company">Basic Education High School No.1, Hakha, Myanmar</p>
+              <ul>
+                <li><b>Honors:</b> Distinctions<br>
+                  <i style="font-size: 1.65rem;" class='bx bxs-medal'>Mathematics</i>
+                  <i style="font-size: 1.65rem;" class='bx bxs-medal'>Physics</i>
+                  <i style="font-size: 1.65rem;" class='bx bxs-medal'>Chemistry</i>
+                </li>
+                <li><b>Relevant Coursework:</b><br>Mathematics, Physics, Chemistry, Biology, English Language, and
+                  Myanmar Language</li>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Certificate Resume -->
+        <div class="resume-detail certificate">
+          <h2 class="heading">My <span>Certificate</span></h2>
+          <p class="resume-text">
+            Below are some of the certificates I have earned to strengthen my technical and professional skills.
+          </p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <div class="img-box">
+                <img src="./certificate/Introduction to Front-End Development.png" alt="Certificate Image">
+              </div>
+              <div class="text-content">
+                <i class="fa-solid fa-award"></i>
+                <h3>Introduction to Front-End Development</h3>
+                <p class="company">Coursera (Meta) Course</p>
+                <a href="https://coursera.org/share/6050e45ebe5b49bf547fb0c74983c9ae" target="_blank">View
+                  Certificate</a>
+              </div>
+            </div>
+            <div class="resume-item">
+              <div class="img-box">
+                <img src="./certificate/Javascript.png" alt="Certificate Image">
+              </div>
+              <div class="text-content">
+                <i class="fa-solid fa-award"></i>
+                <h3>Programming with JavaScript</h3>
+                <p class="company">Coursera (Meta) Course</p>
+                <a href="https://coursera.org/share/545cf07f5bc6723dfa9775d13ce07996" target="_blank">View
+                  Certificate</a>
+              </div>
+            </div>
+            <div class="resume-item">
+              <div class="img-box">
+                <img src="./certificate/Depth in HTML and CSS.png" alt="Certificate Image">
+              </div>
+              <div class="text-content">
+                <i class="fa-solid fa-award"></i>
+                <h3>HTML and CSS in Depth</h3>
+                <p class="company">Coursera (Meta) Course</p>
+                <a href="https://coursera.org/share/c902df091a5cd46e74b055a5ee922e4e" target="_blank">View
+                  Certificate</a>
+              </div>
+            </div>
+            <div class="resume-item">
+              <div class="img-box">
+                <img src="./certificate/Version Control.png" alt="Certificate Image">
+              </div>
+              <div class="text-content">
+                <i class="fa-solid fa-award"></i>
+                <h3>Version Control</h3>
+                <p class="company">Coursera (Meta) Course</p>
+                <a href="https://coursera.org/share/004ced4d56628063e27fa8a31062e19f">View Certificate</a>
+              </div>
+            </div>
+            <div class="resume-item">
+              <div class="img-box">
+                <img src="./certificate/Problem Solving and DecisionMaking.png" alt="Certificate Image">
+              </div>
+              <div class="text-content">
+                <i class="fa-solid fa-award"></i>
+                <h3>Problem Solving and Decision Making</h3>
+                <p class="company">Coursera (University of California, Irvine) Course</p>
+                <a href="./pdf/Effective Problem-Solving and Decision Making.pdf">View Certificate</a>
+              </div>
+            </div>
+            <div class="resume-item">
+              <div class="img-box">
+                <img src="./certificate/Time Management.png" alt="Certificate Image">
+              </div>
+              <div class="text-content">
+                <i class="fa-solid fa-award"></i>
+                <h3>Time Management</h3>
+                <p class="company">Linkedin Course</p>
+                <a href="https://www.linkedin.com/learning/certificates/8f4835d897a896283ee06e7825c710b6772b6d3346c788e9d90341848d9d36a9"
+                  target="_blank">View Certificate</a>
+              </div>
+            </div>
+            <div class="resume-item">
+              <div class="img-box">
+                <img src="./certificate/Leadership Foundation.png" alt="Certificate Image">
+              </div>
+              <div class="text-content">
+                <i class="fa-solid fa-award"></i>
+                <h3>Leadership Foundation</h3>
+                <p class="company">Linkedin Course</p>
+                <a href="https://www.linkedin.com/learning/certificates/6e32a4347dcfa2858d1e2f68901f303a36f0cef73c705eed484c6aa731e093ca"
+                  target="_blank">View Certificate</a>
+              </div>
+            </div>
+            <div class="resume-item exc">
+              <div class="img-box">
+                <img src="./certificate/Teacher Training.png" alt="Certificate Image">
+              </div>
+              <div class="text-content">
+                <i class="fa-solid fa-award"></i>
+                <h3>Teacher Training for Volunteers (Batch 1)</h3>
+                <p class="company">NUG Ministry of Education, Thantlang Township Board</p>
+                <a href="./certificate/Teacher Training.png">View Certificate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Skills Resume -->
+        <div class="resume-detail skills">
+          <h2 class="heading">My <span>skills</span></h2>
+          <p class="resume-text">
+            Hard Skills
+          </p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <i class="fa-brands fa-html5"></i>
+              <span>HTML</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-css3-alt"></i>
+              <span>CSS</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-js"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-github"></i>
+              <span>Github</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-react"></i>
+              <span>React</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-bootstrap"></i>
+              <span>Bootstrap</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-wordpress"></i>
+              <span>wordpress</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-joomla"></i>
+              <span>Joomla</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-drupal"></i>
+              <span>Drupal</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-brands fa-microsoft"></i>
+              <span>MS Office</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-solid fa-palette"></i>
+              <span>PS & AI</span>
+            </div>
+          </div>
+
+          <p class="resume-text">
+            Soft Skills
+          </p>
+          <div class="resume-list">
+            <div class="resume-item">
+              <i class="fa-solid fa-puzzle-piece"></i>
+              <span>Problem Solving</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-solid fa-square-check"></i>
+              <span>Decision Making</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-solid fa-clock"></i>
+              <span>Time Management</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-solid fa-brain"></i>
+              <span>Critical Thinking</span>
+            </div>
+            <div class="resume-item">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Analytical Skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="project" id="project">
+    <h2 class="heading">My Lastest <span>Projects</span></h2>
+    <div class="project-container">
+      <div class="project-box">
+        <div class="project-detail active">
+          <p class="number">01</p>
+          <h3>Grandma Restaurant</h3>
+          <p>
+            A static site for a fictional restaurant with a cozy, traditional look. Features a hero section, menu, and
+            contact info. Built to practice responsive design and semantic HTML.
+          </p>
+          <div class="tech">
+            <p>HTML, CSS</p>
+          </div>
+          <div class="live-github">
+            <a href="https://vanneihthawng.github.io/grandma-restaurant/" target="_blank"><i
+                class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+            <a href="https://github.com/vanneihthawng/grandma-restaurant" target="_blank"><i
+                class="fa-brands fa-github"></i><span>Github Respository</span></a>
+          </div>
+        </div>
+        <div class="project-detail">
+          <p class="number">02</p>
+          <h3>Disney Channel</h3>
+          <p>
+            A simple Disney Channel homepage clone with responsive layout and playful styles using only HTML and CSS.
+          </p>
+          <div class="tech">
+            <p>HTML, CSS</p>
+          </div>
+          <div class="live-github">
+            <a href="https://vanneihthawng.github.io/disney-channel/" target="_blank"><i
+                class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+            <a href="https://github.com/vanneihthawng/disney-channel" target="_blank"><i
+                class="fa-brands fa-github"></i><span>Github Respository</span></a>
+          </div>
+        </div>
+        <div class="project-detail">
+          <p class="number">03</p>
+          <h3>Lucky Shrub</h3>
+          <p>
+            Responsive homepage for a fictional landscaping business, focusing on layout, branding, and modern design.
+          </p>
+          <div class="tech">
+            <p>HTML, CSS</p>
+          </div>
+          <div class="live-github">
+            <a href="https://vanneihthawng.github.io/lucky-shrub/" target="_blank"><i
+                class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+            <a href="https://github.com/vanneihthawng/lucky-shrub" target="_blank"><i
+                class="fa-brands fa-github"></i><span>Github Respository</span></a>
+          </div>
+        </div>
+        <div class="project-detail">
+          <p class="number">04</p>
+          <h3>Kurbungbel</h3>
+          <p>
+            A modern, responsive portfolio site for Kurbungbel to showcase achievements and projects with clean design
+            and smooth navigation.
+          </p>
+          <div class="tech">
+            <p>HTML, CSS, JavaScript</p>
+          </div>
+          <div class="live-github">
+            <a href="https://vanneihthawng.github.io/kurbungbel-porfolio/" target="_blank"><i
+                class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+            <a href="https://github.com/vanneihthawng/kurbungbel-porfolio" target="_blank"><i
+                class="fa-brands fa-github"></i><span>Github Respository</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!--Project Image -->
+      <div class="project-box">
+        <div class="project-img">
+          <div class="img-slide">
+            <div class="img-item">
+              <img src="./image/project1.png" alt="Project Image">
+            </div>
+            <div class="img-item">
+              <img src="./image/project2.png" alt="Project Image">
+            </div>
+            <div class="img-item">
+              <img src="./image/project3.png" alt="Project Image">
+            </div>
+            <div class="img-item">
+              <img src="./image/project4.png" alt="Project Image">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <button class="arrow-left disabled"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <div class="img-con">
+        <div class="image-box">
+          <div class="about-img">
+            <img src="./image/about-dark.png" class="theme-img dark-img" alt="About Image">
+            <img src="./image/about-light.png" class="theme-img light-img" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <p class="scramble" data-original="Hi there! I'm Van a front-end tinkerer who crafts sleek, responsive websites by
+          day and lifts weights by night. My journey mixes a
+          solid computer engineering & IT background with a love for building fun, user-friendly web apps—always
+          learning, always improving, and always keeping things interesting."
+          data-translation="မင်္ဂလာပါ! ကျွန်တော်က Van ပါ။ ကျွန်တော်သည် Front-End ရေးတာစိတ်၀င်စားသူဖြစ်ပြီး နေ့ပိုင်းမှာ ချောမွေ့ပြီး အသုံးပြုရလွယ်ကူသည့် ဝဘ်ဆိုဒ်တွေ ဖန်တီးနေတတ်ပြီး၊ ညဘက်မှာတော့ အလေးမတတ်ပါသည်။ ကွန်ပျူတာအင်ဂျင်နီယာနဲ့ IT နောက်ခံရှိပြီး ပျော်စရာ၊ အသုံးလွယ်သည် ဝက်ဘ်အပ်တွေ ဖန်တီးခြင်းကို ဝါသနာပါပါသည်။ နေ့စဉ်သင်ယူတိုးတက်နေပြီး၊ လက်ရာကိုလည်း အမြဲ စိတ်ဝင်စားဖို့ကောင်းအောင် ကြိုးစား‌နေပါသည်။">
+          Hi there! I'm <strong>Van</strong> a front-end tinkerer who crafts sleek, responsive websites by
+          day and lifts weights by night. My journey mixes a
+          solid computer engineering & IT background with a love for building fun, user-friendly web apps—always
+          learning, always improving, and always keeping things interesting.
+        </p>
+        <h3>What I Do?</h3>
+        <ul>
+          <li class="scramble" data-original="Build responsive, user-friendly websites"
+            data-translation="အသုံးပြုရလွယ်ပြီး Responsive ဖြစ်သော ဝဘ်ဆိုဒ်တွေ တည်ဆောက်ပါတယ်။">Build
+            responsive, user-friendly websites</li>
+          <li class="scramble" data-original="Develop modern front-end interfaces with HTML, CSS, and JavaScript"
+            data-translation="ခေတ်သစ် Front-End Interface တွေကို HTML, CSS နဲ့ JavaScript အသုံးပြုပြီး တီထွင်ဖန်တီးပါတယ်။">
+            Develop modern front-end interfaces with HTML, CSS, and JavaScript</li>
+          <li class="scramble" data-original="Work with React and popular frameworks"
+            data-translation="React နဲ့ နာမည်ကြီး Framework တွေသုံးပြီး ပိုမိုကောင်းမွန်တဲ့ User Interface တွေ ဖန်တီးတတ်ပါတယ်။">
+            Work with React and popular frameworks</li><br>
+          <li class="scramble" data-original="Continuously learn and apply new web technologies"
+            data-translation="နောက်ဆုံးပေါ် Web နည်းပညာတွေကို အမြဲတမ်း သင်ယူပြီး လက်တွေ့အလုပ်ထဲ အသုံးချနေပါတယ်။">
+            Continuously learn and apply new web technologies</li>
+        </ul>
+        <div class="btn-box">
+          <a href="#" class="btn scroll-to-contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- contact section -->
+  <section class="contact" id="contact">
+    <div class="contact-container">
+
+      <div class="contact-box">
+        <h2>Get In Touch</h2>
+        <p class="text scramble">Prefer a quick message? Just drop me an email or call directly - I'd love to hear from
+          you! Feel free to contact anytime!</p>
+
+        <div class="contact-detail">
+          <i class="fa-solid fa-phone"></i>
+          <div class="detail">
+            <p>Phone</p>
+            <p><a href="tel:+12404832788">(240)483-2788</a></p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class="fa-solid fa-envelope"></i>
+          <div class="detail">
+            <p>Email</p>
+            <p><a href="mailto:vanneihthawng@gmail.com">vanneihthawng@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <i class='bx bxs-map'></i>
+          <div class="detail">
+            <p>Address</p>
+            <p><a href="">Elkridge, Maryland</a></p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="contact-box">
+        <form id="contactForm" action="https://formspree.io/f/myzngpzy" method="POST">
+          <h2 class="heading">Contact <span>Me!</span></h2>
+          <div class="field-box">
+            <input type="text" placeholder="Full Name" required name="name">
+            <input type="email" placeholder="Email Address" required name="email">
+            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number" required name="phone"
+              title="Format: 123-456-7890">
+            <input type="text" placeholder="Email Subject" name="email">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="./script.js"></script>
+
+</html>
