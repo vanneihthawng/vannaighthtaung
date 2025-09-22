@@ -24,7 +24,10 @@
 <body>
   <!-- header -->
   <header class="active">
-    <a href="#" class="logo"><img src="./image/logo.png" alt="logo"></a>
+    <a href="#" class="logo">
+      <img src="./image/logo-dark.png" alt="Logo Dark" class="logo-img dark-logo">
+      <img src="./image/logo-light.png" alt="Logo Light" class="logo-img light-logo">
+    </a>
     <i class="fa-solid fa-bars" id="menu-icon"></i>
     <nav>
       <a href="#" class="active">Home</a>
@@ -34,10 +37,10 @@
       <a href="#">Contact</a>
     </nav>
     <!-- Dark Mode Switch -->
-<label class="switch">
-    <input type="checkbox" id="darkModeToggle">
-    <span class="slider"></span>
-  </label>
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
 
   </header>
 
@@ -599,7 +602,7 @@
             <input type="email" placeholder="Email Address" required name="email">
             <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number" required name="phone"
               title="Format: 123-456-7890">
-            <input type="text" placeholder="Email Subject" name="email">
+            <input type="text" placeholder="Email Subject" name="email Subject">
             <textarea name="message" placeholder="Your Message" required></textarea>
           </div>
           <div>

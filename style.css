@@ -112,6 +112,30 @@ header.active {
   width: 100px;
   height: 100px;
 }
+/* Default: dark mode */
+.dark-logo {
+  display: block;
+}
+.light-logo {
+  display: none;
+}
+
+/* Light mode */
+body.light-mode .dark-logo {
+  display: none;
+}
+body.light-mode .light-logo {
+  display: block;
+}
+
+/* Optional: smooth fade */
+.logo-img {
+  transition: opacity 0.5s ease-in-out;
+}
+body:not(.light-mode) .dark-logo { opacity: 1; }
+body:not(.light-mode) .light-logo { opacity: 0; }
+body.light-mode .dark-logo { opacity: 0; }
+body.light-mode .light-logo { opacity: 1; }
 
 nav a {
   color: var(--white-color);
