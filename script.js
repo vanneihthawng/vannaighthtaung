@@ -11,21 +11,21 @@ menuIcon.addEventListener('click', () => {
 
 const activePage = () => {
   const header = document.querySelector('header');
-  const barBox = document.querySelector('.bar-box');
+  // const barBox = document.querySelector('.bar-box');  //-----------------------------default bars
 
   header.classList.remove('active');
   setTimeout(() => {
     header.classList.add('active');
-  }, 1100);
+  }, 100);//-----------------------------defalut period 1100
 
   navLinks.forEach(link => {
     link.classList.remove('active');
   });
 
-  barBox.classList.remove('active');
-  setTimeout(() => {
-    barBox.classList.add('active');
-  }, 1100);
+  // barBox.classList.remove('active');
+  // setTimeout(() => {
+  //   barBox.classList.add('active');
+  // }, 1100); //-----------------------------default bars
 
   sections.forEach(section => {
     section.classList.remove('active');
@@ -45,7 +45,7 @@ navLinks.forEach((link, idx) => {
 
       setTimeout(() => {
         sections[idx].classList.add('active');
-      }, 1100);
+      }, 100); //-----------------------------defalut period 1100
     }
   });
 });
@@ -57,7 +57,7 @@ logoLinks.addEventListener('click', () => {
 
     setTimeout(() => {
       sections[0].classList.add('active');
-    }, 1100);
+    }, 100); //-----------------------------defalut period 1100
   }
 });
 
