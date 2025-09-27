@@ -201,3 +201,31 @@ document.querySelectorAll('.scramble').forEach(el => {
       localStorage.setItem('theme', 'dark');
     }
   });
+
+  // Contact Me Link
+  // all "Contact" buttons behave like nav links
+document.querySelectorAll('.scroll-to-contact').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); 
+
+    const contactSection = document.getElementById('contact');
+    if (!contactSection) return;
+    activePage();
+
+    const sectionsArr = Array.from(sections);
+    const contactIndex = sectionsArr.findIndex(s => s.id === 'contact');
+
+    if (contactIndex !== -1) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      if (navLinks[contactIndex]) navLinks[contactIndex].classList.add('active');
+
+      setTimeout(() => {
+        sections[contactIndex].classList.add('active');
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100); 
+    } else {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
