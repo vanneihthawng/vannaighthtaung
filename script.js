@@ -116,9 +116,9 @@ arrowLeft.addEventListener('click', () => {
   activeProject();
 });
 
-//text transform
+// Text Scrambler
 class TextScrambler {
-  constructor(el, chars = 'vanneihthawng') {
+  constructor(el, chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {
     this.el = el;
     this.chars = chars;
   }
@@ -126,7 +126,6 @@ class TextScrambler {
   scramble(from, to, duration = 800) {
     const start = performance.now();
     const maxLen = Math.max(from.length, to.length);
-
     const randomChar = () => this.chars[Math.floor(Math.random() * this.chars.length)];
 
     const update = (now) => {
@@ -136,13 +135,10 @@ class TextScrambler {
 
       for (let i = 0; i < maxLen; i++) {
         if (i < progress * maxLen) {
-          // once past this character’s turn, show the target
           output += to[i] || '';
         } else if (Math.random() < 0.28) {
-          // sometimes show a random char
           output += randomChar();
         } else {
-          // otherwise show the original
           output += from[i] || '';
         }
       }
@@ -152,7 +148,6 @@ class TextScrambler {
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
-        // ensure exact final state
         this.el.textContent = to;
       }
     };
@@ -164,21 +159,23 @@ class TextScrambler {
 document.querySelectorAll('.scramble').forEach(el => {
   const original = el.getAttribute('data-original');
   const translation = el.getAttribute('data-translation');
+  let showingTranslation = false;
 
-  // sanity check
-  if (!original || !translation) {
-    console.warn('Missing data-original or data-translation on', el);
-    return;
-  }
+  if (!original || !translation) return;
 
   const scr = new TextScrambler(el);
 
-  el.addEventListener('mouseenter', () => {
-    scr.scramble(el.textContent, translation, 1000);
-  });
+  // Tooltip on hover
+  el.setAttribute('title', 'Click to translate');
 
-  el.addEventListener('mouseleave', () => {
-    scr.scramble(el.textContent, original, 1000);
+  // Toggle on click
+  el.addEventListener('click', () => {
+    if (showingTranslation) {
+      scr.scramble(el.textContent, original, 1000);
+    } else {
+      scr.scramble(el.textContent, translation, 1000);
+    }
+    showingTranslation = !showingTranslation;
   });
 });
 

@@ -645,6 +645,42 @@ body.light-mode .light-img {
   color: var(--main-color);
 }
 
+/* Training Box */
+.resume-detail.training .resume-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 2rem;
+  height: auto;
+  overflow: visible;
+}
+
+.resume-detail.training .resume-item {
+  position: relative;
+  height: auto;
+  text-align: center;
+}
+
+.resume-detail.training .resume-item i {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.resume-detail.training .resume-item h3,
+.resume-detail.training .resume-item p {
+  text-align: center;
+}
+
+.resume-detail.training .keywords span {
+  display: inline-block;
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  padding: 0.3rem 0.8rem;
+  margin: 0.3rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+}
+
+
 /* Skill box */
 .resume-detail.skills .resume-list {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
