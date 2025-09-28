@@ -1198,7 +1198,7 @@ body.light-mode .light-img {
 
 .contact-box .field-box textarea{
   grid-column: 1/-1;
-  height: 26rem;
+  height: 15rem;
   resize: none;
 }
 
@@ -1210,6 +1210,17 @@ body.light-mode .light-img {
 .contact-box .btn{
   margin: 2rem;
   cursor: pointer;
+}
+
+/* Success Form Message */
+#formMessage {
+  display: none;
+  margin-top: 1rem;
+  color: var(--main-color);
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.4rem;
+  animation: fadeInOut 1s ease-in-out;
 }
 
 /* Breakpoint */

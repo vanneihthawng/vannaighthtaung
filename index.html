@@ -64,8 +64,10 @@
         <span style="--i:2;" data-text="Curious Learner">Curious Learner</span>
         <span style="--i:1;" data-text="Problem-Solver">Problem-Solver</span>
       </h2>
-      <p class="scramble" data-original="Front-End Developer with IT Support expertise — whether it's code or computers, I make problems disappear"
-        data-translation="Front-End Developer အပြင် IT Support ကျွမ်းကျင်မှု — Code ဖြစ်ဖြစ် Computer ဖြစ်ဖြစ် ပြသနာရှိရင် အကုန်ဖြေရှင်းလိုက်တယ်">Front-End
+      <p class="scramble"
+        data-original="Front-End Developer with IT Support expertise — whether it's code or computers, I make problems disappear"
+        data-translation="Front-End Developer အပြင် IT Support ကျွမ်းကျင်မှု — Code ဖြစ်ဖြစ် Computer ဖြစ်ဖြစ် ပြသနာရှိရင် အကုန်ဖြေရှင်းလိုက်တယ်">
+        Front-End
         Developer with IT Support expertise — whether it's code or computers, I make problems disappear
       </p>
       <div class="btn-container">
@@ -711,8 +713,6 @@
             <p><a href="">Elkridge, Maryland</a></p>
           </div>
         </div>
-
-
       </div>
 
       <div class="contact-box">
@@ -721,8 +721,7 @@
           <div class="field-box">
             <input type="text" placeholder="Full Name" required name="name">
             <input type="email" placeholder="Email Address" required name="email">
-            <input type="tel" placeholder="Phone Number" required name="phone"
-              title="Format: 123-456-7890">
+            <input type="tel" placeholder="Phone Number" required name="phone" title="Format: 123-456-7890">
             <input type="text" placeholder="Email Subject" name="email Subject">
             <textarea name="message" placeholder="Your Message" required></textarea>
           </div>
@@ -730,6 +729,11 @@
             <button type="submit" class="btn">Send Message</button>
           </div>
         </form>
+        <!-- hidden success message -->
+        <div id="formMessage" style="display:none; margin-top:1rem; color:green; font-weight:bold;">
+          ✅ Thanks! Your message has been sent successfully.
+        </div>
+
       </div>
     </div>
   </section>

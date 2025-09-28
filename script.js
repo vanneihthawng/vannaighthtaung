@@ -226,3 +226,36 @@ document.querySelectorAll('.scroll-to-contact').forEach(btn => {
   });
 });
 
+// Contact Form Submission
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const messageBox = document.getElementById("formMessage");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        form.reset();
+        messageBox.style.display = "block";
+        messageBox.style.color = "green";
+        messageBox.textContent = "✅ Thanks! Your message has been sent successfully.";
+      } else {
+        messageBox.style.display = "block";
+        messageBox.style.color = "red";
+        messageBox.textContent = "⚠️ Oops! Something went wrong. Please try again.";
+      }
+    } catch (error) {
+      messageBox.style.display = "block";
+      messageBox.style.color = "red";
+      messageBox.textContent = "⚠️ Network error. Please try again later.";
+    }
+  });
+});
