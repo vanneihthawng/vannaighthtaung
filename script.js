@@ -36,19 +36,49 @@ const activePage = () => {
 
 }
 
+// Sub Nav Links Seciton
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    const href = link.getAttribute('href');
 
-navLinks.forEach((link, idx) => {
-  link.addEventListener('click', () => {
-    if (!link.classList.contains('active')) {
+    // Skip the parent "Projects" dropdown toggle
+    if (href === "javascript:void(0)" || link.classList.contains('dropbtn')) {
+      return;
+    }
+
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
       activePage();
       link.classList.add('active');
 
-      setTimeout(() => {
-        sections[idx].classList.add('active');
-      }, 100); //-----------------------------defalut period 1100
+      if (targetElement.tagName.toLowerCase() === 'section') {
+        targetElement.classList.add('active');
+      }
+
+      // If it's a project-group, activate its parent section AND itself
+      if (targetElement.classList.contains('project-group')) {
+        // Show the main project section
+        document.querySelector('#project').classList.add('active');
+
+        // Hide all groups first
+        document.querySelectorAll('.project-group').forEach(group => {
+          group.classList.remove('active');
+        });
+
+        // Show the chosen group
+        targetElement.classList.add('active');
+      }
+
+      // Smooth scroll into view
+      targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
+
+// ----------------------------- Logo Click (Home)
 
 logoLinks.addEventListener('click', () => {
   if (!navLinks[0].classList.contains('active')) {
@@ -79,41 +109,64 @@ resumeBtns.forEach((btn, idx) => {
   });
 });
 
-const arrowRight = document.querySelector('.project-container .arrow-right');
-const arrowLeft = document.querySelector('.project-container .arrow-left');
-let index = 0;
-const activeProject = () => {
-  const imgSlide = document.querySelector(`.project-box .img-slide`);
-  const projectDetais = document.querySelectorAll('.project-detail');
 
-  imgSlide.style.transform = `translateX(calc(-${index * 100}% - ${index * 2}rem))`;
+// Project Slide Arrows
 
-  projectDetais.forEach(detail => {
-    detail.classList.remove('active');
-  });
-  projectDetais[index].classList.add('active');
-}
-arrowRight.addEventListener('click', () => {
-  if (index < 3) {
-    index++;
-    arrowLeft.classList.remove('disabled');
+document.querySelectorAll('.project-group').forEach(group => {
+  const arrowRight = group.querySelector('.arrow-right');
+  const arrowLeft = group.querySelector('.arrow-left');
+  let index = 0;
+
+  const activeProject = () => {
+    const activeGroup = document.querySelector('.project-group.active');
+    if (!activeGroup) return;
+
+    const imgSlide = activeGroup.querySelector('.img-slide');
+    const projectDetails = activeGroup.querySelectorAll('.project-detail');
+    if (!projectDetails.length) return;
+
+    // If frontend group → include the 2rem gap
+    if (activeGroup.dataset.category === 'frontend') {
+      imgSlide.style.transform = `translateX(calc(-${index * 100}% - ${index * 2}rem))`;
+    } else {
+      // IT Support (or any group without gap)
+      imgSlide.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    projectDetails.forEach(detail => detail.classList.remove('active'));
+    projectDetails[index].classList.add('active');
+  };
+
+  if (arrowRight) {
+    arrowRight.addEventListener('click', () => {
+      const projectDetails = group.querySelectorAll('.project-detail');
+      const total = projectDetails.length;
+
+      if (index < total - 1) {
+        index++;
+        arrowLeft.classList.remove('disabled');
+      }
+      if (index === total - 1) {
+        arrowRight.classList.add('disabled');
+      }
+      activeProject();
+    });
   }
-  else {
-    index = 4;
-    arrowRight.classList.add('disabled');
+
+  if (arrowLeft) {
+    arrowLeft.addEventListener('click', () => {
+      const projectDetails = group.querySelectorAll('.project-detail');
+
+      if (index > 0) {
+        index--;
+        arrowRight.classList.remove('disabled');
+      }
+      if (index === 0) {
+        arrowLeft.classList.add('disabled');
+      }
+      activeProject();
+    });
   }
-  activeProject();
-});
-arrowLeft.addEventListener('click', () => {
-  if (index > 1) {
-    index--;
-    arrowRight.classList.remove('disabled');
-  }
-  else {
-    index = 0;
-    arrowLeft.classList.add('disabled');
-  }
-  activeProject();
 });
 
 // Text Scrambler
@@ -180,30 +233,30 @@ document.querySelectorAll('.scramble').forEach(el => {
 });
 
 // Dark mOde
- const toggle = document.getElementById('darkModeToggle');
+const toggle = document.getElementById('darkModeToggle');
 
-  // Load saved theme
-  if (localStorage.getItem('theme') === 'light') {
+// Load saved theme
+if (localStorage.getItem('theme') === 'light') {
+  document.body.classList.add('light-mode');
+  toggle.checked = true;
+}
+
+// Toggle theme on click
+toggle.addEventListener('change', () => {
+  if (toggle.checked) {
     document.body.classList.add('light-mode');
-    toggle.checked = true;
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.body.classList.remove('light-mode');
+    localStorage.setItem('theme', 'dark');
   }
+});
 
-  // Toggle theme on click
-  toggle.addEventListener('change', () => {
-    if (toggle.checked) {
-      document.body.classList.add('light-mode');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.body.classList.remove('light-mode');
-      localStorage.setItem('theme', 'dark');
-    }
-  });
-
-  // Contact Me Link
-  // all "Contact" buttons behave like nav links
+// Contact Me Link
+// all "Contact" buttons behave like nav links
 document.querySelectorAll('.scroll-to-contact').forEach(btn => {
   btn.addEventListener('click', (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const contactSection = document.getElementById('contact');
     if (!contactSection) return;
@@ -219,7 +272,7 @@ document.querySelectorAll('.scroll-to-contact').forEach(btn => {
       setTimeout(() => {
         sections[contactIndex].classList.add('active');
         contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 100); 
+      }, 100);
     } else {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }

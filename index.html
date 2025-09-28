@@ -30,11 +30,23 @@
     </a>
     <i class="fa-solid fa-bars" id="menu-icon"></i>
     <nav>
-      <a href="#" class="active">Home</a>
-      <a href="#">Resume</a>
-      <a href="#">Projects</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#home" class="active">Home</a>
+      <a href="#resume">Resume</a>
+      <!-- ------------------------------- -->
+
+
+      <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Projects <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#frontend-projects">Frontend Projects</a>
+          <a href="#itsupport-projects">IT Support Projects</a>
+        </div>
+      </div>
+
+
+      <!-- ------------------------------ -->
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
     <!-- Dark Mode Switch -->
     <label class="switch">
@@ -120,7 +132,7 @@
           <div class="resume-list it">
             <div class="resume-item">
               <p class="year">2025 - Present</p>
-              <h3>IT Trainee - CompTIA A+ & Network+</h3>
+              <h3>IT Trainee - CompTIA A+, Network+</h3>
               <p class="company">TrainAce, Greenbelt, MD</p>
               <ul>
                 <li>Training in IT support with hands-on experience in hardware and networking fundamentals</li>
@@ -131,7 +143,7 @@
             </div>
             <div class="resume-item">
               <p class="year">2025 - Present</p>
-              <h3>Meta Front-End Development Project</h3>
+              <h3>Meta Front-End Project</h3>
               <p class="company">Coursera (Meta Course)</p>
               <ul>
                 <li>Developed interactive web applications using React and TypeScript</li>
@@ -143,7 +155,7 @@
             <div class="resume-item">
               <p class="year">Mar 2019 - May 2019</p>
               <h3>IT Summer Internship</h3>
-              <p class="company">KBZ Bank, Yangon and Bago Region, Myanmar</p>
+              <p class="company">KBZ Bank, Bago Region, Myanmar</p>
               <ul>
                 <li>Supported IT operations in a live banking environment</li>
                 <li>Monitored and maintained network infrastructure to improve uptime</li>
@@ -509,120 +521,184 @@
   <!-- Projects Section -->
   <section class="project" id="project">
     <h2 class="heading">My Lastest <span>Projects</span></h2>
-    <div class="project-container">
-      <div class="project-box">
-        <div class="project-detail active">
-          <p class="number">01</p>
-          <h3>Grandma Restaurant</h3>
-          <p>
-            A static site for a fictional restaurant with a cozy, traditional look. Features a hero section, menu, and
-            contact info. Built to practice responsive design and semantic HTML.
-          </p>
-          <div class="tech">
-            <p>HTML, CSS</p>
-          </div>
-          <div class="live-github">
-            <a href="https://vanneihthawng.github.io/grandma-restaurant/" target="_blank"><i
-                class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/vanneihthawng/grandma-restaurant" target="_blank"><i
-                class="fa-brands fa-github"></i><span>Github Respository</span></a>
-          </div>
-        </div>
-        <div class="project-detail">
-          <p class="number">02</p>
-          <h3>Disney Channel</h3>
-          <p>
-            A simple Disney Channel homepage clone with responsive layout and playful styles using only HTML and CSS.
-          </p>
-          <div class="tech">
-            <p>HTML, CSS</p>
-          </div>
-          <div class="live-github">
-            <a href="https://vanneihthawng.github.io/disney-channel/" target="_blank"><i
-                class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/vanneihthawng/disney-channel" target="_blank"><i
-                class="fa-brands fa-github"></i><span>Github Respository</span></a>
-          </div>
-        </div>
-        <div class="project-detail">
-          <p class="number">03</p>
-          <h3>Lucky Shrub</h3>
-          <p>
-            Responsive homepage for a fictional landscaping business, focusing on layout, branding, and modern design.
-          </p>
-          <div class="tech">
-            <p>HTML, CSS</p>
-          </div>
-          <div class="live-github">
-            <a href="https://vanneihthawng.github.io/lucky-shrub/" target="_blank"><i
-                class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/vanneihthawng/lucky-shrub" target="_blank"><i
-                class="fa-brands fa-github"></i><span>Github Respository</span></a>
-          </div>
-        </div>
-        <div class="project-detail">
-          <p class="number">04</p>
-          <h3>Kurbungbel</h3>
-          <p>
-            A modern, responsive portfolio site for Kurbungbel to showcase achievements and projects with clean design
-            and smooth navigation.
-          </p>
-          <div class="tech">
-            <p>HTML, CSS, JavaScript</p>
-          </div>
-          <div class="live-github">
-            <a href="https://vanneihthawng.github.io/kurbungbel-porfolio/" target="_blank"><i
-                class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/vanneihthawng/kurbungbel-porfolio" target="_blank"><i
-                class="fa-brands fa-github"></i><span>Github Respository</span></a>
-          </div>
-        </div>
-        <div class="project-detail">
-          <p class="number">05</p>
-          <h3>Van Neih Thawng</h3>
-          <p>
-            My personal portfolio site built with HTML, CSS, and JavaScript. It highlights my skills, experience, and
-            projects in a clean, responsive design.
-          </p>
-          <div class="tech">
-            <p>HTML, CSS, JavaScript</p>
-          </div>
-          <div class="live-github">
-            <a href="https://vanneihthawng.github.io/vanneihthawng/" target="_blank"><i
-                class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
-            <a href="https://github.com/vanneihthawng/vanneihthawng.git" target="_blank"><i
-                class="fa-brands fa-github"></i><span>Github Respository</span></a>
-          </div>
-        </div>
-        <!-- Add More Project Description Here -->
-      </div>
-
-      <!--Project Image -->
-      <div class="project-box">
-        <div class="project-img">
-          <div class="img-slide">
-            <div class="img-item">
-              <img src="./image/project1.png" alt="Project Image">
+    <!-- Front End Project Group -->
+    <div class="project-group" data-category="frontend" id="frontend-projects">
+      <div class="project-container">
+        <div class="project-box">
+          <!-- Project 1 -->
+          <div class="project-detail active" data-category="frontend" data-id="1">
+            <p class="number">01</p>
+            <h3>Grandma Restaurant</h3>
+            <p>
+              A static site for a fictional restaurant with a cozy, traditional look. Features a hero section, menu, and
+              contact info. Built to practice responsive design and semantic HTML.
+            </p>
+            <div class="tech">
+              <p>HTML, CSS</p>
             </div>
-            <div class="img-item">
-              <img src="./image/project2.png" alt="Project Image">
+            <div class="live-github">
+              <a href="https://vanneihthawng.github.io/grandma-restaurant/" target="_blank"><i
+                  class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+              <a href="https://github.com/vanneihthawng/grandma-restaurant" target="_blank"><i
+                  class="fa-brands fa-github"></i><span>Github Respository</span></a>
             </div>
-            <div class="img-item">
-              <img src="./image/project3.png" alt="Project Image">
-            </div>
-            <div class="img-item">
-              <img src="./image/project4.png" alt="Project Image">
-            </div>
-            <div class="img-item">
-              <img src="./image/project5.png" alt="Project Image">
-            </div>
-            <!-- Add more project Img Here -->
           </div>
+          <!-- Project 2 -->
+          <div class="project-detail" data-category="frontend" data-id="2">
+            <p class="number">02</p>
+            <h3>Disney Channel</h3>
+            <p>
+              A simple Disney Channel homepage clone with responsive layout and playful styles using only HTML and CSS.
+            </p>
+            <div class="tech">
+              <p>HTML, CSS</p>
+            </div>
+            <div class="live-github">
+              <a href="https://vanneihthawng.github.io/disney-channel/" target="_blank"><i
+                  class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+              <a href="https://github.com/vanneihthawng/disney-channel" target="_blank"><i
+                  class="fa-brands fa-github"></i><span>Github Respository</span></a>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="project-detail" data-category="frontend" data-id="3">
+            <p class="number">03</p>
+            <h3>Lucky Shrub</h3>
+            <p>
+              Responsive homepage for a fictional landscaping business, focusing on layout, branding, and modern design.
+            </p>
+            <div class="tech">
+              <p>HTML, CSS</p>
+            </div>
+            <div class="live-github">
+              <a href="https://vanneihthawng.github.io/lucky-shrub/" target="_blank"><i
+                  class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+              <a href="https://github.com/vanneihthawng/lucky-shrub" target="_blank"><i
+                  class="fa-brands fa-github"></i><span>Github Respository</span></a>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="project-detail" data-category="frontend" data-id="4">
+            <p class="number">04</p>
+            <h3>Kurbungbel</h3>
+            <p>
+              A modern, responsive portfolio site for Kurbungbel to showcase achievements and projects with clean design
+              and smooth navigation.
+            </p>
+            <div class="tech">
+              <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="live-github">
+              <a href="https://vanneihthawng.github.io/kurbungbel-porfolio/" target="_blank"><i
+                  class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+              <a href="https://github.com/vanneihthawng/kurbungbel-porfolio" target="_blank"><i
+                  class="fa-brands fa-github"></i><span>Github Respository</span></a>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="project-detail" data-category="frontend" data-id="5">
+            <p class="number">05</p>
+            <h3>Van Neih Thawng</h3>
+            <p>
+              My personal portfolio site built with HTML, CSS, and JavaScript. It highlights my skills, experience, and
+              projects in a clean, responsive design.
+            </p>
+            <div class="tech">
+              <p>HTML, CSS, JavaScript</p>
+            </div>
+            <div class="live-github">
+              <a href="https://vanneihthawng.github.io/vanneihthawng/" target="_blank"><i
+                  class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+              <a href="https://github.com/vanneihthawng/vanneihthawng.git" target="_blank"><i
+                  class="fa-brands fa-github"></i><span>Github Respository</span></a>
+            </div>
+          </div>
+          <!-- Add More Project Description Here -->
         </div>
 
+        <!--Project Image -->
+        <div class="project-box">
+          <div class="project-img">
+            <div class="img-slide">
+              <div class="img-item" data-category="frontend" data-id="1">
+                <img src="./image/project1.png" alt="Project Image">
+              </div>
+              <div class="img-item" data-category="frontend" data-id="2">
+                <img src="./image/project2.png" alt="Project Image">
+              </div>
+              <div class="img-item" data-category="frontend" data-id="3">
+                <img src="./image/project3.png" alt="Project Image">
+              </div>
+              <div class="img-item" data-category="frontend" data-id="4">
+                <img src="./image/project4.png" alt="Project Image">
+              </div>
+              <div class="img-item" data-category="frontend" data-id="5">
+                <img src="./image/project5.png" alt="Project Image">
+              </div>
+              <!-- Add more project Img Here -->
+            </div>
+          </div>
+        </div>
+        <button class="arrow-left disabled"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
       </div>
-      <button class="arrow-left disabled"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+    <!-- IT Support Project Group -->
+    <div class="project-group" data-category="itsupport" id="itsupport-projects">
+      <div class="project-container">
+        <div class="project-box">
+          <!-- Project 1 -->
+          <div class="project-detail active" data-category="itsupport" data-id="1">
+            <p class="number">01</p>
+            <h3>Linux Installation and Configration</h3>
+            <p>Installed and configured Linux OS on multiple systems, ensuring optimal performance and security.
+            </p>
+            <div class="tech">
+                <p>Linux, Bash, System Administration</p>
+            </div>
+            <div class="live-github">
+              <a href="https://" target="_blank"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+              <a href="https://" target="_blank"><i class="fa-solid fa-file"></i><span>Documentation</span></a>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-detail" data-category="itsupport" data-id="2">
+            <p class="number">02</p>
+            <h3>Building LAN Network</h3>
+            <p>
+              Designed and implemented a Local Area Network (LAN) for a small office, improving connectivity and
+              resource
+              sharing.
+            </p>
+            <div class="tech">
+                <p>Networking, Cisco Packet Tracer, LAN Design</p>
+            </div>
+            <div class="live-github">
+              <a href="https://" target="_blank"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
+              <a href="https://" target="_blank"><i class="fa-solid fa-file"></i><span>Documentation</span></a>
+            </div>
+          </div>
+          <!-- Add more IT project-detail blocks here with data-id="7", "8", etc. -->
+
+        </div>
+        <div class="project-box">
+          <div class="project-img">
+            <div class="img-slide">
+              <div class="img-item" data-category="itsupport" data-id="1">
+                <img src="./image/itproject1.png" alt="Project Image">
+              </div>
+              <div class="img-item" data-category="itsupport" data-id="1">
+                <img src="./image/itproject2.jpg" alt="Project Image">
+              </div>
+              <!-- Add more IT project Img Here -->
+            </div>
+          </div>
+        </div>
+        <button class="arrow-left disabled"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="arrow-right"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+    </div>
     </div>
   </section>
 
