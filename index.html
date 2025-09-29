@@ -32,9 +32,7 @@
     <nav>
       <a href="#home" class="active">Home</a>
       <a href="#resume">Resume</a>
-      <!-- ------------------------------- -->
-
-
+      <!-- ---------------Sub Nav---------------- -->
       <div class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Projects <i class="fa-solid fa-chevron-down"></i></a>
         <div class="dropdown-content">
@@ -42,10 +40,8 @@
           <a href="#itsupport-projects">IT Support Projects</a>
         </div>
       </div>
-
-
       <!-- ------------------------------ -->
-      <a href="#about">About</a>
+      <a href="#about" class="aboutnav">About</a>
       <a href="#contact">Contact</a>
     </nav>
     <!-- Dark Mode Switch -->
@@ -654,7 +650,7 @@
             <p>Installed and configured Linux OS on multiple systems, ensuring optimal performance and security.
             </p>
             <div class="tech">
-                <p>Linux, Bash, System Administration</p>
+              <p>Linux, Bash, System Administration</p>
             </div>
             <div class="live-github">
               <a href="https://" target="_blank"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
@@ -671,7 +667,7 @@
               sharing.
             </p>
             <div class="tech">
-                <p>Networking, Cisco Packet Tracer, LAN Design</p>
+              <p>Networking, Cisco Packet Tracer, LAN Design</p>
             </div>
             <div class="live-github">
               <a href="https://" target="_blank"><i class="fa-solid fa-arrow-left"></i><span>Live Project</span></a>
@@ -804,12 +800,11 @@
           <div>
             <button type="submit" class="btn">Send Message</button>
           </div>
+          <!-- hidden success message -->
+          <div id="formMessage" style="display:none; margin-top:1rem; color:green; font-weight:bold;">
+            ✅ Thanks! Your message has been sent successfully.
+          </div>
         </form>
-        <!-- hidden success message -->
-        <div id="formMessage" style="display:none; margin-top:1rem; color:green; font-weight:bold;">
-          ✅ Thanks! Your message has been sent successfully.
-        </div>
-
       </div>
     </div>
   </section>

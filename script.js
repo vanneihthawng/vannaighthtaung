@@ -57,22 +57,13 @@ navLinks.forEach(link => {
       if (targetElement.tagName.toLowerCase() === 'section') {
         targetElement.classList.add('active');
       }
-
-      // If it's a project-group, activate its parent section AND itself
       if (targetElement.classList.contains('project-group')) {
-        // Show the main project section
         document.querySelector('#project').classList.add('active');
-
-        // Hide all groups first
         document.querySelectorAll('.project-group').forEach(group => {
           group.classList.remove('active');
         });
-
-        // Show the chosen group
         targetElement.classList.add('active');
       }
-
-      // Smooth scroll into view
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
   });
@@ -107,6 +98,26 @@ resumeBtns.forEach((btn, idx) => {
     });
     resumeDetails[idx].classList.add('active');
   });
+});
+
+// ----------------------------- Dropdown Toggle (Projects submenu)
+document.querySelectorAll('.dropbtn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    const dropdown = btn.parentElement;
+
+    document.querySelectorAll('.dropdown').forEach(d => {
+      if (d !== dropdown) d.classList.remove('open');
+    });
+
+    dropdown.classList.toggle('open');
+  });
+});
+
+document.addEventListener('click', e => {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+  }
 });
 
 
