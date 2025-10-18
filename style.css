@@ -501,11 +501,11 @@ body.light-mode .light-img {
    display: block;
   position: absolute;
   top: 3rem;
-  width: 90%;
+  width: 110%;
   object-fit: cover;
   mix-blend-mode: normal;
  /* Feather effect */
-  mask-image: linear-gradient(to bottom, black 80%, transparent 10%);
+  mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
@@ -1096,8 +1096,9 @@ body.light-mode .light-img {
 /* DArk IMG */
 .image-box .about-img .dark-img {
   position: absolute;
-  top: -5rem;
-  width: 100%;
+  top: 1rem;
+  left: -6rem;
+  width: 130%;
   object-fit: cover;
   mix-blend-mode: lighten;
   animation: aboutpic 5s linear infinite;
@@ -1105,12 +1106,14 @@ body.light-mode .light-img {
 /* Light image */
 .image-box .about-img .light-img {
   position: absolute;
-  top: 0rem;
-  left: -1.5rem;
-  width: 115%;
+  top: -3rem;
+  left: auto;
+  width: 120%;
   object-fit: cover;
   mix-blend-mode: normal; /* must be normal for light image to show */
   animation: aboutpic 5s linear infinite;
+    mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
 }
 
 @keyframes aboutpic{
