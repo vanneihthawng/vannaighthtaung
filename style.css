@@ -1058,7 +1058,7 @@ body.light-mode .light-img {
   overflow: hidden;
 }
 
-.image-box::before,
+/* .image-box::before,
 .image-box::after {
   content: '';
   position: absolute;
@@ -1069,9 +1069,9 @@ body.light-mode .light-img {
   background: conic-gradient(transparent, transparent, transparent, var(--main-color));
   transform: rotate(0deg);
   animation: rotate-border 10s linear infinite;
-}
+} */
 
-.image-box::after {
+/* .image-box::after {
   animation-delay: -5s;
 }
 
@@ -1079,7 +1079,7 @@ body.light-mode .light-img {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 .image-box .about-img {
   position: relative;
@@ -1096,9 +1096,9 @@ body.light-mode .light-img {
 /* DArk IMG */
 .image-box .about-img .dark-img {
   position: absolute;
-  top: 1rem;
-  left: -6rem;
-  width: 130%;
+  top: -5rem;
+  left: -9.5vw;
+  width: 150%;
   object-fit: cover;
   mix-blend-mode: lighten;
   animation: aboutpic 5s linear infinite;
@@ -1106,11 +1106,11 @@ body.light-mode .light-img {
 /* Light image */
 .image-box .about-img .light-img {
   position: absolute;
-  top: -3rem;
-  left: auto;
+  top: -6.5vh;
+  left: -3.5vw;
   width: 120%;
   object-fit: cover;
-  mix-blend-mode: normal; /* must be normal for light image to show */
+  /*mix-blend-mode: normal; /* must be normal for light image to show */
   animation: aboutpic 5s linear infinite;
     mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
@@ -1314,8 +1314,10 @@ body.light-mode .light-img {
   left: -30rem;
   top: -30rem;
 }
+.image-box .about-img .light-img {
+  top: -4.5vh;
 }
-
+}
 @media screen and (max-width: 992px) {
   header {
     padding: 2rem 4%;
@@ -1356,8 +1358,15 @@ body.light-mode .light-img {
   left: -34rem;
   top: -34rem;
 }
+.image-box .about-img .dark-img {
+  top: 0rem;
+  left: -6vw;
 }
-
+.image-box .about-img .light-img {
+  top: -3.5vh;
+  left: -3.5vw;
+}
+}
 @media screen and (max-width: 810px) {
   .contact-box .field-box{
     grid-template-columns: 1fr;
@@ -1439,11 +1448,12 @@ body.light-mode .light-img {
     padding: 15rem 5rem;
   } 
   .image-box{
-    width: 40vw;
-    height: 40vw;
+    width: 60vw;
+    height: 55vw;
   }
   .about-content h2{
     text-align: center;
+    margin-top: -2rem;
   }
   .about-content p{
     text-align-last: center;
@@ -1459,7 +1469,17 @@ body.light-mode .light-img {
   top: -32rem;
 }
 
-  .contact-box .field-box{
+.image-box .about-img .dark-img {
+  top:2vh;
+  left: -13.5vw;
+}
+.image-box .about-img .light-img { 
+  top: 0vh;
+  left: 0vw;
+  width: 100%;
+}
+
+.contact-box .field-box{
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1497,8 +1517,8 @@ body.light-mode .light-img {
 
 @media screen and (max-width: 600px) {
   .home-img .img-container {
-    width: 30rem;
-    height: 30rem;
+    width: 32rem;
+    height: 32rem;
   }
   .resume-detail.experience .resume-list {
     height: 37.6vh;
@@ -1514,6 +1534,19 @@ body.light-mode .light-img {
   .contact-box .field-box{
     grid-template-columns: 1fr;
   }
+.image-box{
+    width: 70vw;
+    height: 65vw;
+  }
+.image-box .about-img .dark-img {
+  top:2vh;
+  left: -15.5vw;
+}
+.image-box .about-img .light-img { 
+  top: 0vh;
+  left: 0vw;
+  width: 100%;
+}
 
 }
 
@@ -1534,6 +1567,17 @@ body.light-mode .light-img {
   .about-container{
     padding: 3rem 2rem;
   }
+  .image-box{
+    width: 80vw;
+    height: 70vw;
+  }
+  .image-box .about-img .dark-img {
+  left: -17.5vw;
+}
+.image-box .about-img .light-img {
+  left: -2vw;
+  width: 100%;
+}
 }
 
 @media screen and (max-width: 400px) {
@@ -1566,5 +1610,16 @@ body.light-mode .light-img {
   height: 70rem;
   left: -20rem;
   top: -20rem;
+}
+.image-box{
+    width: 85vw;
+    height: 75vw;
+  }
+  .image-box .about-img .dark-img {
+  left: -19.5vw;
+}
+.image-box .about-img .light-img {
+  left: -2vw;
+  width: 100%;
 }
 }
