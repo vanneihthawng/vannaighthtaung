@@ -121,63 +121,71 @@ document.addEventListener('click', e => {
 });
 
 
-// Project Slide Arrows
-
+// Project Slide Arrows (ROBUST FIX: works with gap, any # of slides)
 document.querySelectorAll('.project-group').forEach(group => {
   const arrowRight = group.querySelector('.arrow-right');
   const arrowLeft = group.querySelector('.arrow-left');
+  const imgSlide = group.querySelector('.img-slide');
+
   let index = 0;
 
-  const activeProject = () => {
-    const activeGroup = document.querySelector('.project-group.active');
-    if (!activeGroup) return;
-
-    const imgSlide = activeGroup.querySelector('.img-slide');
-    const projectDetails = activeGroup.querySelectorAll('.project-detail');
-    if (!projectDetails.length) return;
-
-    // If frontend group → include the 2rem gap
-    if (activeGroup.dataset.category === 'frontend') {
-      imgSlide.style.transform = `translateX(calc(-${index * 100}% - ${index * 2}rem))`;
-    } else {
-      // IT Support (or any group without gap)
-      imgSlide.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    projectDetails.forEach(detail => detail.classList.remove('active'));
-    projectDetails[index].classList.add('active');
+  const getGapPx = () => {
+    if (!imgSlide) return 0;
+    const styles = getComputedStyle(imgSlide);
+    // for grid, gap may be in "columnGap" or "gap"
+    const gap = styles.columnGap || styles.gap || "0px";
+    return parseFloat(gap) || 0;
   };
 
-  if (arrowRight) {
-    arrowRight.addEventListener('click', () => {
-      const projectDetails = group.querySelectorAll('.project-detail');
-      const total = projectDetails.length;
+  const update = () => {
+    if (!group.classList.contains('active')) return;
 
-      if (index < total - 1) {
-        index++;
-        arrowLeft.classList.remove('disabled');
-      }
-      if (index === total - 1) {
-        arrowRight.classList.add('disabled');
-      }
-      activeProject();
-    });
-  }
+    const projectDetails = group.querySelectorAll('.project-detail');
+    const total = projectDetails.length;
+    if (!total || !imgSlide) return;
 
-  if (arrowLeft) {
-    arrowLeft.addEventListener('click', () => {
-      const projectDetails = group.querySelectorAll('.project-detail');
+    // move by real pixels: (slide width + gap)
+    const slideWidth = imgSlide.parentElement.clientWidth; // .project-img width
+    const step = slideWidth + getGapPx();
+    imgSlide.style.transform = `translateX(-${index * step}px)`;
 
-      if (index > 0) {
-        index--;
-        arrowRight.classList.remove('disabled');
-      }
-      if (index === 0) {
-        arrowLeft.classList.add('disabled');
-      }
-      activeProject();
-    });
-  }
+    projectDetails.forEach(d => d.classList.remove('active'));
+    projectDetails[index].classList.add('active');
+
+    // arrows disabled state
+    if (arrowLeft) arrowLeft.classList.toggle('disabled', index === 0);
+    if (arrowRight) arrowRight.classList.toggle('disabled', index === total - 1);
+  };
+
+  arrowRight?.addEventListener('click', () => {
+    if (!group.classList.contains('active')) return;
+
+    const total = group.querySelectorAll('.project-detail').length;
+    if (index < total - 1) index++;
+    update();
+  });
+
+  arrowLeft?.addEventListener('click', () => {
+    if (!group.classList.contains('active')) return;
+
+    if (index > 0) index--;
+    update();
+  });
+
+  // keep correct when screen resizes
+  window.addEventListener('resize', update);
+
+  // when switching between frontend/itsupport, reset to first slide
+  const obs = new MutationObserver(() => {
+    if (group.classList.contains('active')) {
+      index = 0;
+      update();
+    }
+  });
+  obs.observe(group, { attributes: true, attributeFilter: ['class'] });
+
+  // initial
+  update();
 });
 
 // Text Scrambler
