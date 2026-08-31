@@ -14,64 +14,174 @@
 </p>
 
 <p align="center">
-  Responsive personal portfolio built with HTML, CSS, and JavaScript to present my technical background, projects, certifications, training, and professional experience.
+  Personal portfolio website showcasing my experience, technical training, certifications, skills, and projects.
 </p>
 
 ---
 
-## Project Overview
+## Overview
 
-This portfolio was developed as a professional platform for presenting my background in IT support and front-end development.
+This portfolio presents my background in **IT Support** and **Front-End Development**.
 
-The website includes:
+Main sections:
 
-- Professional experience
-- Education
-- Technical training
-- Certifications
-- IT support skills
-- Front-end development skills
-- IT support projects and labs
-- Front-end projects
-- About section
-- Contact form
+```text
+Home
+Resume
+├── Experience
+├── Education
+├── Training
+├── Certificates
+└── Skills
 
-The project was built with HTML5, CSS3, and Vanilla JavaScript.
+Projects
+├── Front-End Projects
+└── IT Support Projects
 
----
-
-## Technology Stack
-
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=000000" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-  <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel">
-</p>
-
-| Technology | Purpose |
-|---|---|
-| HTML5 | Semantic structure and website content |
-| CSS3 | Responsive design, themes, layouts, and animations |
-| JavaScript | Navigation, tabs, carousel, themes, translation, and form handling |
-| Git | Version control |
-| GitHub | Source code management |
-| Vercel | Production deployment |
-| Formspree | Contact form processing |
+About
+Contact
+```
 
 ---
 
-## Key Features
+## Tech Stack
 
-### Responsive Design
+* HTML5
+* CSS3
+* JavaScript
+* Git
+* GitHub
+* Vercel
+* Formspree
+* Font Awesome
+* Boxicons
 
-The portfolio supports desktop, laptop, tablet, and mobile screen sizes using:
+---
 
-- CSS Grid
-- Flexbox
-- Media queries
-- Responsive typography
-- Mobile navigation
-- Adaptive project layouts
+## Main Features
+
+* Responsive desktop, tablet, and mobile design
+* Dark and light mode
+* Responsive navigation
+* Interactive resume tabs
+* Front-End and IT Support project categories
+* Project carousel
+* English / Burmese text translation
+* Contact form with Formspree
+* Theme preference saved with `localStorage`
+* Vercel deployment
+
+---
+
+## Resume Sections
+
+### Experience
+
+Professional IT and other work experience.
+
+### Education
+
+Academic background and technical coursework.
+
+### Training
+
+Hands-on technical training, including CompTIA A+ and Network+ preparation.
+
+### Certificates
+
+Professional and technical certifications.
+
+### Skills
+
+IT Support, networking, operating systems, troubleshooting, development tools, and professional skills.
+
+---
+
+## Projects
+
+### Front-End Projects
+
+| Project              | Technologies          |
+| -------------------- | --------------------- |
+| Grandma Restaurant   | HTML, CSS             |
+| Disney Channel       | HTML, CSS             |
+| Lucky Shrub          | HTML, CSS             |
+| Kurbungbel Portfolio | HTML, CSS, JavaScript |
+| Personal Portfolio   | HTML, CSS, JavaScript |
+
+### IT Support Projects
+
+| Project                               | Focus                                     |
+| ------------------------------------- | ----------------------------------------- |
+| Kali Linux Installation on VirtualBox | Linux, Virtualization                     |
+| macOS Installation on VirtualBox      | macOS, Virtualization                     |
+| IT Support Ticketing Cases            | Help Desk, Troubleshooting, Documentation |
+
+IT Support Ticketing Repository:
+
+https://github.com/vanneihthawng/IT-Support-Ticket-Case
+
+---
+
+## Project Structure
+
+```text
+vannaighthtaung/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+│
+├── image/
+│   ├── logos
+│   ├── profile images
+│   └── project screenshots
+│
+├── certificate/
+│   └── certificate images
+│
+└── pdf/
+    ├── certificates
+    └── IT documentation
+```
+
+---
+
+## Run Locally
+
+```bash
+git clone https://github.com/vanneihthawng/vannaighthtaung.git
+```
+
+```bash
+cd vannaighthtaung
+```
+
+Open:
+
+```text
+index.html
+```
+
+No package installation is required.
+
+---
+
+## Deployment
+
+The portfolio is deployed with **Vercel**.
+
+**Live Website:**
+https://vanneihthawng.vercel.app/
+
+---
+
+## Author
+
+**Van Neih Thawng**
+
+IT Support | Help Desk | Desktop Support | Front-End Development
+
+* GitHub: https://github.com/vanneihthawng
+* LinkedIn: https://www.linkedin.com/in/vanneihthawng/
