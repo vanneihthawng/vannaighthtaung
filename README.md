@@ -4,9 +4,6 @@
   <a href="https://vanneihthawng.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/VIEW_LIVE_PORTFOLIO-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="View Live Portfolio">
   </a>
-  <a href="https://github.com/vanneihthawng" target="_blank">
-    <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  </a>
   <a href="https://www.linkedin.com/in/vanneihthawng/" target="_blank">
     <img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
@@ -79,13 +76,5 @@ The portfolio supports desktop, laptop, tablet, and mobile screen sizes using:
 - Mobile navigation
 - Adaptive project layouts
 
-Responsive breakpoints include:
-
-```text
-1200px
-992px
-810px
-768px
-600px
 450px
 400px
