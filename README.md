@@ -17,19 +17,8 @@
 </p>
 
 <p align="center">
-  A responsive personal portfolio built with HTML, CSS, and JavaScript to present my IT support experience, technical training, certifications, projects, skills, and professional background.
+  Responsive personal portfolio built with HTML, CSS, and JavaScript to present my technical background, projects, certifications, training, and professional experience.
 </p>
-
----
-
-## Live Website
-
-The production version of this portfolio is deployed with Vercel.
-
-### [Open Live Portfolio](https://vanneihthawng.vercel.app/)
-
-> This GitHub repository contains the source code.  
-> Use the link above to view the actual deployed website.
 
 ---
 
@@ -40,18 +29,17 @@ This portfolio was developed as a professional platform for presenting my backgr
 The website includes:
 
 - Professional experience
-- Technical training
 - Education
+- Technical training
 - Certifications
 - IT support skills
 - Front-end development skills
-- IT support labs and projects
+- IT support projects and labs
 - Front-end projects
 - About section
-- Contact information
 - Contact form
 
-The project was built with HTML5, CSS3, and Vanilla JavaScript without a front-end framework.
+The project was built with HTML5, CSS3, and Vanilla JavaScript.
 
 ---
 
@@ -66,8 +54,6 @@ The project was built with HTML5, CSS3, and Vanilla JavaScript without a front-e
   <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel">
 </p>
 
-### Core Technologies
-
 | Technology | Purpose |
 |---|---|
 | HTML5 | Semantic structure and website content |
@@ -78,21 +64,13 @@ The project was built with HTML5, CSS3, and Vanilla JavaScript without a front-e
 | Vercel | Production deployment |
 | Formspree | Contact form processing |
 
-### External Libraries
-
-- Font Awesome
-- Boxicons
-- Google Fonts
-
 ---
 
 ## Key Features
 
 ### Responsive Design
 
-The portfolio supports desktop, laptop, tablet, and mobile screen sizes.
-
-Responsive behavior is implemented with:
+The portfolio supports desktop, laptop, tablet, and mobile screen sizes using:
 
 - CSS Grid
 - Flexbox
@@ -101,7 +79,7 @@ Responsive behavior is implemented with:
 - Mobile navigation
 - Adaptive project layouts
 
-Current responsive breakpoints include:
+Responsive breakpoints include:
 
 ```text
 1200px
