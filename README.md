@@ -75,6 +75,3 @@ The portfolio supports desktop, laptop, tablet, and mobile screen sizes using:
 - Responsive typography
 - Mobile navigation
 - Adaptive project layouts
-
-450px
-400px
